@@ -20,7 +20,7 @@ namespace App_1_Stephanie
 
                 StreamWriter nombre;
                 nombre = File.CreateText(archivo + ".txt");
-                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ.");
+                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ..");
                 nombre.Close();
 
 
