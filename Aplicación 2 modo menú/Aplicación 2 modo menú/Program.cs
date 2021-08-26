@@ -33,7 +33,7 @@ namespace Aplicación_2_modo_menú
 
                     StreamWriter nombre;
                     nombre = File.CreateText(archivo + ".txt");
-                    nombre.WriteLine("SE HA CREADO EL ARCHIVO DESEADO");
+                    nombre.WriteLine("SE HA CREADO EL ARCHIVO DESEADO...");
                     nombre.Close();
 
                 }
