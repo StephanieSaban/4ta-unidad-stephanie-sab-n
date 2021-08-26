@@ -11,27 +11,37 @@ namespace App_1_Stephanie
     {
         static void Main(string[] args)
         {
-            string R = "s";
-            while (R == "s")
+            char tiempo;
+            Console.Write("¿desea crear un archivo ?: s/n ");
+            tiempo = char.Parse(Console.ReadLine());
+            if (tiempo == 's')
             {
-                Console.WriteLine("Escribe el nombre del archivo: ");
+                Console.WriteLine("anota el nombre del archivo: ");
                 string archivo = Console.ReadLine();
-
 
                 StreamWriter nombre;
                 nombre = File.CreateText(archivo + ".txt");
-                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ..");
+                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ, BIENVENIDO SEAS");
+                nombre.Close();
+
+                Console.Write("¿desea crear otro archivo ?: s/n ");
+                tiempo = char.Parse(Console.ReadLine());
+                Console.Clear();
+
+            }
+            if (tiempo == 's')
+            {
+                Console.WriteLine("anota el nombre del archivo: ");
+                string archivo = Console.ReadLine();
+
+                StreamWriter nombre;
+                nombre = File.CreateText(archivo + ".txt");
+                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ, BIENVENIDO SEAS");
                 nombre.Close();
 
 
-                Console.WriteLine("Quieres crear otro archivo?");
-                Console.WriteLine("s/n");
-                R = Console.ReadLine();
-                Console.Clear();
-                if (R == "no")
-                {
-                    return;
-                }
+
             }
-    }    }
+        }
+    }   
 }
