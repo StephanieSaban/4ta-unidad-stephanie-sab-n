@@ -66,8 +66,6 @@ namespace Aplicación_2_modo_menú
                     Console.ReadKey();
       
                 }
-
-
                 else if (op == 4)
                 {
                     Environment.Exit(0);
